@@ -5,37 +5,39 @@ void main()
 {
 	setlocale(LC_ALL, "ru");
 
-	int sybol1count;
+	int sybol_count;
 	char sybol;
-	int lineType;
+	int line_type;
 	int index = 0;
-	
-	cout << "Введите количетсво символов: " << endl;
-	cin >> sybol1count;
 
-	cout << "Введите символ: " << endl;
+	cout << "Введите количество символом: " << endl;
+	cin >> sybol_count;
+
+	cout << "Введите символ:" << endl;
 	cin >> sybol;
 
-	cout << "Выберите тип линии: " << endl
-		<< "1. Горизонтальный " << endl
-		<< "2. Вертикальный" << endl;
-	cin >> lineType;
+	cout << "Введите тип линии" << endl
+		<< "1.Вертикальная" << endl
+		<< "2.Горизонтальная" << endl;
+	cin >> line_type;
 
-	if (lineType!=1&&lineType!=2)
+	if (line_type!=1 && line_type!=2)
 	{
 		cout << "Не корректный тип линии!" << endl;
-		return;
+			return;
 	}
-	while (index<sybol1count)
+
+	while (index<sybol_count)
 	{
-		if (lineType == 1)
+		if (line_type==1)
+		{
+			cout << sybol << endl;
+		}
+		if (line_type==2)
 		{
 			cout << sybol;
 		}
-		if (lineType==2)
-		{
-			cout << sybol<<endl;
-		}	
-		index++;	
+		index++;
 	}
 	cout << endl << endl;
+}
